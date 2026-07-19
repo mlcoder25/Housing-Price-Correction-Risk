@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: housing-price-correction-risk-svc
+spec:
+  selector:
+    app: housing-price-correction-risk
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8000
+  type: ClusterIP
